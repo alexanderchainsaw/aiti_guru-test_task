@@ -1,0 +1,37 @@
+[project]
+name = "aiti-guru-test-task"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13.1"
+dependencies = [
+    "asyncpg>=0.30.0",
+    "dishka>=1.7.2",
+    "fastapi[standard]>=0.120.0",
+    "psycopg2-binary>=2.9.11",
+    "pydantic-settings>=2.11.0",
+    "yoyo-migrations>=9.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "isort>=7.0.0",
+    "pytest>=8.4.2",
+    "ruff>=0.14.2",
+]
+
+[tool.black]
+line-length = 100
+
+
+[tool.isort]
+profile = "black"
+src_paths = ["app"]
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+# Ruff automatically fixes imports like isort when you run `ruff check --fix`
+fix = true
+target-version = "py313"
