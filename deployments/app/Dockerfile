@@ -3,8 +3,6 @@ FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
 
 WORKDIR /app
 
-ENV INCLUDE_ODBC=0
-
 # Enable bytecode compilation
 ENV UV_COMPILE_BYTECODE=1
 
